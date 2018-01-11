@@ -1,0 +1,27 @@
+{
+  "name": "react-native-skewable-view",
+  "version": "0.0.1",
+  "description": "A skewable view for react native (iOS and Android)",
+  "main": "SkewableView.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wumke/react-native-skewable-view"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "skew",
+    "skewable",
+    "android",
+    "ios"
+  ],
+  "author": "Wumke",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/wumke/react-native-skewable-view/issues"
+  },
+  "homepage": "http://watchwimswork.be"
+}
