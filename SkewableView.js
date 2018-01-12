@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, Platform, TouchableHighlight, ListView, Image, Dimensions, RefreshControl, ScrollView, AppState, Alert } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 
 export default class SkewableView extends Component {
     constructor(props) {
@@ -61,9 +61,7 @@ export default class SkewableView extends Component {
                 renderable = false;
             }
             innerMaxHeight = innerHeight;
-            console.log('>>>> >>>> >>>> radang: ' + angleRad);
-            console.log('>>>> >>>> >>>> cos: ' + Math.cos(angleRad));
-            innerHeight = innerHeight * Math.cos(angleRad) - innerWidth/2 * Math.tan(angleRad)
+            innerHeight = innerHeight * Math.cos(angleRad) - innerWidth/2 * Math.tan(angleRad);
             innerHeight = Math.floor(innerHeight);
             translateX = -(innerWidth-this.props.boundingBoxWidth)/2;
             translateY = (this.props.boundingBoxHeight-innerHeight)/2;
@@ -71,14 +69,6 @@ export default class SkewableView extends Component {
         else {
             renderable = false;
         }
-        
-        // console.log('angle: ' + angleDeg);
-        // console.log('innerwidth: ' + innerWidth);
-        // console.log('innerheight: ' + innerHeight);
-        // console.log('boundingwidth: ' + this.props.boundingBoxWidth);
-        // console.log('boundingheight: ' + this.props.boundingBoxHeight);
-        // console.log('translateX: ' + translateX);
-        // console.log('translateY: ' + translateY);
         
         if(renderable) {//example is vertical skew!
             return (
@@ -122,7 +112,3 @@ export default class SkewableView extends Component {
         }
     }
 }
-
-const styles = StyleSheet.create({
-
-});
